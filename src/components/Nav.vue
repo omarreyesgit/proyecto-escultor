@@ -1,60 +1,35 @@
 <template>
 <div>
-    <v-app-bar app dark fixed>
-        <v-app-bar-nav-icon class="hidden-md-and-up" @click="drawer=!drawer"></v-app-bar-nav-icon>
-        <v-container class="hidden-sm-and-down container--fluid">
-            <v-layout>
-                <v-flex>
-                    <v-btn color="secondary"><a href="/" class="white--text">
-                            <v-icon>mdi-home</v-icon> Home
-                        </a></v-btn>
-                    <v-btn rounded><a href="/Biografia" class="white--text">Biografia</a></v-btn>
-                    <v-btn rounded><a href="#" class="white--text">Esculturas</a></v-btn>
-                    <v-btn rounded><a href="#" class="white--text">Dibujos</a></v-btn>
-                    <v-btn rounded><a href="#" class="white--text">WorkShops</a></v-btn>
-                    <v-btn rounded><a href="#" class="white--text">Proyecto con Niños</a></v-btn>
-                    <v-btn rounded><a href="#" class="white--text">Contacto</a></v-btn>
-                </v-flex>
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark mb-1">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- <a class="navbar-brand" href="#">Navbar</a>-->
 
-            </v-layout>
-        </v-container>
-    </v-app-bar>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <router-link to="/" class="nav-link">Home</router-link>
+                </li>
+                <li class="nav-item">
+                    <router-link to="/Biografia" class="nav-link">Biografia</router-link>
+                </li>
 
-    <v-navigation-drawer v-model="drawer" app dark temporary class="mt-14">
-        <v-container>
-            <v-layout>
-                <v-flex>
-                    <v-btn color="secondary" rounded block><a href="/" class="white--text">
-                            <v-icon>mdi-home</v-icon>
-                        </a></v-btn>
-                    <v-btn rounded block><a href="/Biografia" class="yellow--text">Biografia</a></v-btn>
-                    <v-btn rounded block><a href="#" class="yellow--text">Esculturas</a></v-btn>
-                    <v-btn rounded block><a href="#" class="yellow--text">Dibujos</a></v-btn>
-                    <v-btn rounded block><a href="#" class="yellow--text">WorkShops</a></v-btn>
-                    <v-btn rounded block><a href="#" class="yellow--text">Proyecto con Niños</a></v-btn>
-                    <v-btn rounded block><a href="#" class="yellow--text">Contacto</a></v-btn>
-                </v-flex>
-
-            </v-layout>
-        </v-container>
-    </v-navigation-drawer>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-info my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
 </div>
 </template>
 
 <script>
 export default {
-    data() {
-        return {
-            drawer: false
-
-        }
-    }
+    name: 'Nav'
 }
 </script>
 
 <style scoped>
-a {
-    text-decoration: none;
-
-}
 </style>
